@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Room Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+  <h1>Smart Room Dashboard</h1>
+
+  <div class="card">
+    <h3>Temperature</h3>
+    <div id="temperature">-- °C</div>
+  </div>
+
+  <div class="card">
+    <h3>Motion</h3>
+    <div id="motion">--</div>
+  </div>
+
+  <div class="card">
+    <h3>Light Control</h3>
+    <label>
+      <input type="checkbox" id="lightToggle" class="toggle" />
+      Light
+    </label>
+  </div>
+
+  <div class="card">
+    <h3>Fan Control</h3>
+    <label>
+      <input type="checkbox" id="fanToggle" class="toggle" />
+      Fan
+    </label>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
