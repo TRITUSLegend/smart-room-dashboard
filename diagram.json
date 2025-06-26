@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "author": "Aditya Raj Kar",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 29.1,
+      "left": -139.8,
+      "attrs": { "temperature": "27.4" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -61,
+      "left": -105.6,
+      "rotate": 180,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 44.4, "left": 195.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 44.4,
+      "left": 138.2,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 157.85,
+      "left": 123.4,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 138.65,
+      "left": 113.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v28.8", "h86.4", "v-144" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v48", "h67.2", "v-48" ] ],
+    [ "dht1:SDA", "esp:12", "green", [ "v38.4", "h105.7", "v-38.4" ] ],
+    [ "btn1:1.l", "esp:14", "green", [ "h19.4", "v159.4" ] ],
+    [ "btn1:2.r", "esp:GND.2", "black", [ "h-9.6", "v-23.2", "h249.6", "v105.6" ] ],
+    [ "led2:C", "esp:GND.3", "black", [ "v0" ] ],
+    [ "led1:C", "esp:GND.3", "black", [ "v38.4", "h-86", "v-28.8" ] ],
+    [ "led2:A", "r2:1", "green", [ "v19.2", "h9.6" ] ],
+    [ "r2:2", "esp:4", "green", [ "v0" ] ],
+    [ "led1:A", "r1:1", "green", [ "v76.8" ] ],
+    [ "r1:2", "esp:2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
