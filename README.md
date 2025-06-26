@@ -6,7 +6,7 @@ A fully functional **smart room dashboard** to monitor and control room conditio
 
 ## 🌐 Live Demo
 
-🔗 [View Live Dashboard](https://github.com/TRITUSLegend/smart-room-dashboard)
+🔗 [View Live Dashboard](https://trituslegend.github.io/smart-room-dashboard/)
 
 ---
 
